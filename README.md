@@ -40,3 +40,11 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+---
+
+### Linting with Hadolint
+
+```bash
+docker run --rm -i hadolint/hadolint < Dockerfile
+```
