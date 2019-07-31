@@ -34,12 +34,16 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
+> Note that to being able to run the image in Kubernetes, if you are not using the pmbrull/udacity-devops-api image but rather a custom one, you need to run `upload_docker.sh` script.
+
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+> You can obtain the logs from a running pod with `kubectl logs <podName>`. Check the name of your pods by means of `kubectl get pods`.
 
 ---
 
@@ -48,3 +52,4 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ```bash
 docker run --rm -i hadolint/hadolint < Dockerfile
 ```
+
