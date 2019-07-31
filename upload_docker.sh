@@ -6,17 +6,9 @@
 # Step 0:
 # Load configurations
 . ./cfg.sh
-
-# Docker image parameters
-path=udacity_devops_api
-version=0.1
+. ./parameters.sh
 
 # Step 1:
-# Create dockerpath
-# dockerpath=<your docker ID/path>
-dockerpath=$username/$path;
-
-# Step 2:
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 
@@ -26,6 +18,6 @@ imageId=$(docker images -q $dockerpath:latest)
 docker login -u=$username -p=$docker_pwd
 docker tag $imageId $dockerpath:$version
 
-# Step 3:
+# Step 2:
 # Push image to a docker repository
 docker push $dockerpath
